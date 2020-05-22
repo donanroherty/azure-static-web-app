@@ -5,12 +5,24 @@
       "type": "httpTrigger",
       "direction": "in",
       "name": "req",
-      "methods": ["get"]
+      "methods": [
+        "get"
+      ]
     },
     {
       "type": "http",
       "direction": "out",
       "name": "res"
+    },
+    {
+      "type": "cosmosDB",
+      "direction": "in",
+      "name": "inputDocument",
+      "databaseName": "design-db",
+      "collectionName": "designs",
+      "connectionStringSetting": "webapp_DOCUMENTDB",
+      "id": "id",
+      "partitionKey": "branch"
     }
   ],
   "scriptFile": "../dist/GetDesignData/index.js"
