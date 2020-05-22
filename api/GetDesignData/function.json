@@ -11,18 +11,6 @@
       "type": "http",
       "direction": "out",
       "name": "res"
-    },
-    {
-      "type": "cosmosDB",
-      "direction": "in",
-      "name": "design",
-      "databaseName": "design-db",
-      "collectionName": "designs",
-      "connectionStringSetting": "webapp_DOCUMENTDB",
-      "id": "designs",
-      "partitionKey": "designs",
-      "Id": "{Query.id}",
-      "PartitionKey": "{Query.partitionKeyValue}"
     }
   ],
   "scriptFile": "../dist/GetDesignData/index.js"
